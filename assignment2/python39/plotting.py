@@ -1,4 +1,3 @@
-import itertools
 import logging
 import os
 import glob
@@ -13,6 +12,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+#Special thanks to John Tay and Chad Maron. I adapted their initial take onto this file(s)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -44,9 +44,6 @@ to_process = {
 }
 
 the_best = {}
-
-# TODO: Drop the sd graphing? Might not add much to some graphs.... CONTPEAKS -SA is kind of a mess...
-
 
 def plot_data(title, data, column_prefixes=None, validate_only=False, nn_curve=False, clear_existing=True,
               ylim=None, x_scale='linear', y_scale='linear', legend_name=None,
@@ -120,8 +117,6 @@ def read_data_file(file, nn_curve=False):
     if 'iterations' not in df.columns:
         df = df.rename(columns={'iteration': 'iterations'})
 
-    #df = df.set_index('iterations')
-    # Trim the nn graphs to the first 1k iterations, as after that the graphs flatten out
     if nn_curve:
         df = df[df.index <= 2000]
 
