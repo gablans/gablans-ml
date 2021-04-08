@@ -1,6 +1,6 @@
 # gablans-ml
-## Gabe Blanco - Georgia Tech University - Machine Learning
+## Gabe Blanco - Code Repo
 
-This is a shared Repo for Machine Learning Projects and Ideas. It includes the work of several lessons, supervised and unsupervised Machine Learning algorithms and approaches with examples and explanations.
+This is a shared Repo for any Projects and Ideas. It includes the work I've done with supervised and unsupervised Machine Learning algorithms and approaches with examples and explanations.
 
 
